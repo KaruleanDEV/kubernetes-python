@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: Python-WDiscord
+spec:
+  replicas: 1
+  selector:
+    app: Python
+  template:
+    metadata:
+      labels:
+        app: DiscordWebhook
+      name: K8s
+    spec:
+      containers:
+      - image: karulean/kubernetes-deployment:experimental
+        imagePullPolicy: Always
+        name: k8sDeployment
