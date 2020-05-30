@@ -13,7 +13,7 @@ spec:
       name: pythonwdiscord
     spec:
       containers:
-      - image: karulean/kubernetes-deployment
+      - image: karulean/kubernetes-deployment:experimental
         imagePullPolicy: Always
         name: experimental
         
